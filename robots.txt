@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /politica-privacidad.html
+Disallow: /terminos-condiciones.html
+
+Sitemap: https://www.elenadordecolombia.com.co/sitemap.xml

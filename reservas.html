@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservas | El Leñador de Colombia</title>
+  <meta name="description" content="Reserva tu mesa en El Leñador de Colombia, restaurante de comida típica santandereana en Bucaramanga.">
+  <link rel="canonical" href="https://www.elenadordecolombia.com.co/reservas.html">
+  <link rel="icon" type="image/png" href="assets/favicon/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <img src="assets/icons/logo.svg" alt="Logo El Leñador de Colombia" onerror="this.style.display='none'">
+        El Leñador de Colombia
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="nav-menu" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="menu.html">Menú</a>
+        <a href="galeria.html">Galería</a>
+        <a href="reservas.html" aria-current="page">Reservas</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" style="min-height: 38vh;">
+      <div class="hero-media">
+        <img src="assets/images/reservas-hero.jpg" alt="Mesa lista en El Leñador de Colombia"
+             onerror="this.src='https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80'">
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-eyebrow">Reserva tu mesa</span>
+          <h1>Reservas</h1>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container" style="max-width: 800px;">
+        <p class="text-center" style="margin-bottom: var(--space-7);">Completa el formulario y confirmaremos tu reserva. Para grupos grandes o eventos especiales, contáctanos directamente por WhatsApp.</p>
+
+        <form data-validate novalidate aria-label="Formulario de reservas">
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="res-nombre">Nombre completo *</label>
+              <input type="text" id="res-nombre" name="nombre" data-required>
+              <span class="form-error-msg">Por favor ingresa tu nombre completo.</span>
+            </div>
+
+            <div class="form-field">
+              <label for="res-telefono">Teléfono / WhatsApp *</label>
+              <input type="tel" id="res-telefono" name="telefono" data-required data-type="phone" placeholder="300 000 0000">
+              <span class="form-error-msg">Ingresa un número de teléfono colombiano válido.</span>
+            </div>
+
+            <div class="form-field">
+              <label for="res-email">Correo electrónico</label>
+              <input type="email" id="res-email" name="email" data-type="email">
+              <span class="form-error-msg">Ingresa un correo electrónico válido.</span>
+            </div>
+
+            <div class="form-field">
+              <label for="res-personas">Número de personas *</label>
+              <select id="res-personas" name="personas" data-required>
+                <option value="">Selecciona...</option>
+                <option>1-2 personas</option>
+                <option>3-4 personas</option>
+                <option>5-8 personas</option>
+                <option>Más de 8 personas</option>
+              </select>
+              <span class="form-error-msg">Selecciona el número de personas.</span>
+            </div>
+
+            <div class="form-field">
+              <label for="res-fecha">Fecha *</label>
+              <input type="date" id="res-fecha" name="fecha" data-required>
+              <span class="form-error-msg">Selecciona una fecha válida (hoy o posterior).</span>
+            </div>
+
+            <div class="form-field">
+              <label for="res-hora">Hora *</label>
+              <input type="time" id="res-hora" name="hora" data-required>
+              <span class="form-error-msg">Selecciona una hora.</span>
+            </div>
+
+            <div class="form-field form-field--full">
+              <label for="res-notas">Notas adicionales</label>
+              <textarea id="res-notas" name="notas" placeholder="Alguna solicitud especial, alergias, ocasión..."></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top: var(--space-6);">Confirmar reserva</button>
+
+          <div class="form-success" tabindex="-1">
+            <span aria-hidden="true">✓</span>
+            <span>¡Gracias! Hemos recibido tu solicitud de reserva y te confirmaremos pronto.</span>
+          </div>
+        </form>
+
+        <p class="text-center" style="margin-top: var(--space-7); font-size: var(--fs-sm);">
+          ¿Prefieres reservar directo? Escríbenos a
+          <a href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary); font-weight: var(--fw-semibold);">WhatsApp</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="assets/icons/logo.svg" alt="" style="height:32px;" onerror="this.style.display='none'">
+            El Leñador de Colombia
+          </div>
+          <p style="color: rgba(245,239,228,0.7); font-size: var(--fs-sm);">Comida típica santandereana y platos a la leña en el barrio La Victoria, Bucaramanga.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram de El Leñador de Colombia">IG</a>
+            <a href="#" aria-label="Facebook de El Leñador de Colombia">FB</a>
+          </div>
+        </div>
+        <nav class="footer-links" aria-label="Enlaces del sitio">
+          <h4>Navegación</h4>
+          <a href="index.html">Inicio</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="menu.html">Menú</a>
+          <a href="galeria.html">Galería</a>
+          <a href="reservas.html">Reservas</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+        <nav class="footer-links" aria-label="Enlaces legales">
+          <h4>Legal</h4>
+          <a href="politica-privacidad.html">Política de privacidad</a>
+          <a href="terminos-condiciones.html">Términos y condiciones</a>
+        </nav>
+        <div>
+          <h4>Contacto</h4>
+          <ul class="footer-contact">
+            <li>Calle 68, Barrio La Victoria, Bucaramanga, Santander</li>
+            <li>+57 300 000 0000</li>
+            <li>contacto@elenadordecolombia.com.co</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-current-year>2026</span> El Leñador de Colombia. Todos los derechos reservados.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="float-actions">
+    <a class="float-btn float-btn--whatsapp" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2z"/></svg>
+    </a>
+    <button class="float-btn float-btn--top" aria-label="Volver arriba">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+  </div>
+
+  <div class="cookie-banner" role="region" aria-label="Aviso de cookies">
+    <p>Usamos almacenamiento local para recordar tus preferencias de navegación. Al continuar aceptas nuestra <a href="politica-privacidad.html" style="text-decoration:underline;">política de privacidad</a>.</p>
+    <button class="btn btn-primary btn-sm" data-cookie-accept>Aceptar</button>
+  </div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>
