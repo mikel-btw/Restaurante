@@ -1,0 +1,135 @@
+/* ============================================================
+   ARCHIVO: variables.css
+   PROPÓSITO: Sistema de diseño centralizado (design tokens)
+   RESPONSABILIDAD: Definir todas las variables CSS (colores,
+     tipografía, espaciados, sombras, radios, transiciones) que
+     usa el resto del proyecto. Ningún otro archivo CSS debe
+     declarar colores o medidas "a mano": todo se referencia
+     desde aquí para garantizar consistencia visual total.
+   DEPENDENCIAS: Ninguna (se carga primero, antes que reset.css)
+   AUTOR: Equipo de desarrollo — El Leñador de Colombia
+   FECHA DE CREACIÓN: 2026-07-10
+
+   ══════════════════════════════════════════════════════════
+   ZONA EDITABLE #1 — IDENTIDAD DE MARCA
+   Para adaptar esta plantilla a otro restaurante, este es el
+   ÚNICO bloque de colores que normalmente necesitas tocar.
+   Todo el sitio (botones, enlaces, hovers, bordes, sombras de
+   acento) se recalcula automáticamente a partir de estas
+   variables.
+   ══════════════════════════════════════════════════════════ */
+
+:root {
+  /* ---- PALETA DE MARCA -------------------------------------
+     Inspirada en la gastronomía colombiana tradicional:
+     madera/leña (marrón), achiote/ají (rojo teja) y
+     maíz/plátano maduro (dorado). Ajustar aquí para rebrandear. */
+  --color-primary: #7a2e1d;           /* Rojo teja / achiote — acento principal */
+  --color-primary-dark: #5c2115;      /* Variante oscura (hover, active) */
+  --color-primary-light: #a3452e;     /* Variante clara (fondos suaves, focus) */
+
+  --color-secondary: #2f261d;         /* Marrón madera oscuro — texto, header */
+  --color-secondary-light: #4a3c2c;   /* Marrón madera medio */
+
+  --color-accent: #d9a441;            /* Dorado maíz — detalles, iconos, precios */
+  --color-accent-dark: #b3822e;
+
+  --color-success: #3f7a4d;           /* Confirmaciones (formularios, reservas) */
+  --color-error: #b3261e;             /* Errores de validación */
+  --color-warning: #c98a1f;
+
+  /* ---- NEUTROS ---------------------------------------------- */
+  --color-bg: #fdfbf7;                /* Fondo general (blanco cálido) */
+  --color-bg-alt: #f5efe4;            /* Fondo alterno de secciones */
+  --color-bg-dark: #201812;           /* Fondo oscuro (footer, CTA nocturno) */
+  --color-surface: #ffffff;           /* Tarjetas, modales */
+
+  --color-text: #241a12;              /* Texto principal */
+  --color-text-muted: #6b5c4c;        /* Texto secundario */
+  --color-text-inverse: #f5efe4;      /* Texto sobre fondos oscuros */
+
+  --color-border: #e4d9c6;            /* Bordes suaves */
+  --color-border-dark: #3a2e22;
+
+  /* ══════════════════════════════════════════════════════════
+     ZONA EDITABLE #2 — TIPOGRAFÍA
+     Cambiar aquí la familia tipográfica actualiza todo el sitio.
+     ══════════════════════════════════════════════════════════ */
+  --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Mulish', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --fs-xs: 0.75rem;      /* 12px */
+  --fs-sm: 0.875rem;     /* 14px */
+  --fs-base: 1rem;       /* 16px */
+  --fs-md: 1.125rem;     /* 18px */
+  --fs-lg: 1.375rem;     /* 22px */
+  --fs-xl: 1.75rem;      /* 28px */
+  --fs-2xl: 2.25rem;     /* 36px */
+  --fs-3xl: 3rem;        /* 48px */
+  --fs-4xl: 4rem;        /* 64px */
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --lh-tight: 1.15;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.75;
+
+  /* ---- ESPACIADO (escala 8px) -------------------------------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  /* ---- CONTENEDORES / GRID ------------------------------------ */
+  --container-max: 1280px;
+  --container-padding: clamp(1.25rem, 5vw, 3rem);
+
+  /* ---- RADIOS DE BORDE (consistentes en todo el sitio) ------- */
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+
+  /* ---- SOMBRAS (única escala, no crear sombras ad-hoc) ------- */
+  --shadow-sm: 0 1px 3px rgba(36, 26, 18, 0.08);
+  --shadow-md: 0 6px 20px rgba(36, 26, 18, 0.10);
+  --shadow-lg: 0 16px 40px rgba(36, 26, 18, 0.16);
+  --shadow-accent: 0 10px 30px rgba(122, 46, 29, 0.25);
+
+  /* ---- TRANSICIONES (única escala de tiempos/curvas) --------- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 450ms;
+
+  /* ---- Z-INDEX (escala centralizada, evita "z-index wars") --- */
+  --z-header: 100;
+  --z-overlay: 200;
+  --z-modal: 300;
+  --z-toast: 400;
+
+  /* ---- LAYOUT FIJO -------------------------------------------- */
+  --header-height: 84px;
+  --header-height-scrolled: 68px;
+}
+
+/* ══════════════════════════════════════════════════════════
+   MODO OSCURO DEL SISTEMA (opcional, respeta preferencia OS)
+   No se activa por defecto; el sitio está diseñado para verse
+   premium en modo claro, pero se deja el hook preparado.
+   ══════════════════════════════════════════════════════════ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --scheme-available-dark: 1;
+  }
+}

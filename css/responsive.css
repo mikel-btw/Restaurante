@@ -1,0 +1,64 @@
+/* ============================================================
+   ARCHIVO: responsive.css
+   PROPÓSITO: Ajustes finos de layout por breakpoint que no
+     encajan dentro de un componente individual (los componentes
+     ya incluyen sus propios media queries locales cuando aplica;
+     aquí van los ajustes transversales de página completa).
+   RESPONSABILIDAD: Breakpoints probados: 320, 375, 425, 768,
+     1024, 1280, 1440, 1920, 2560px.
+   DEPENDENCIAS: variables.css, style.css, components.css
+   AUTOR: Equipo de desarrollo — El Leñador de Colombia
+   FECHA DE CREACIÓN: 2026-07-10
+   ============================================================ */
+
+/* ---- Pantallas muy grandes (2560px+) ------------------------- */
+@media (min-width: 1920px) {
+  :root {
+    --container-max: 1440px;
+  }
+}
+
+/* ---- Desktop estándar (1280–1440px): sin cambios, es el base */
+
+/* ---- Tablets grandes / laptops pequeños ---------------------- */
+@media (max-width: 1024px) {
+  .footer-grid { row-gap: var(--space-6); }
+}
+
+/* ---- Tablets (768px) ------------------------------------------ */
+@media (max-width: 900px) {
+  .hero { text-align: center; }
+  .hero-content { margin-inline: auto; }
+  .hero-actions { justify-content: center; }
+}
+
+@media (max-width: 768px) {
+  section { scroll-margin-top: var(--header-height-scrolled); }
+  .container { padding-inline: var(--space-5); }
+}
+
+/* ---- Móviles medianos/pequeños (375–425px) --------------------- */
+@media (max-width: 425px) {
+  .btn { width: 100%; }
+  .hero-actions { flex-direction: column; width: 100%; }
+  .float-actions { right: var(--space-4); bottom: var(--space-4); }
+  .float-btn { width: 50px; height: 50px; }
+}
+
+/* ---- Móviles muy pequeños (320px) ------------------------------ */
+@media (max-width: 340px) {
+  :root { --container-padding: var(--space-4); }
+  h1 { font-size: var(--fs-2xl); }
+  h2 { font-size: var(--fs-xl); }
+}
+
+/* ---- Prevención de scroll horizontal (regla de seguridad) ----- */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* ---- Landscape en móviles: reducir hero a min-height razonable */
+@media (max-height: 480px) and (orientation: landscape) {
+  .hero { min-height: 640px; }
+}
