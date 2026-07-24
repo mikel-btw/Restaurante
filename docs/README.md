@@ -1,4 +1,4 @@
-# El Leñador de Colombia — Sitio Web
+#El Leñador de Colombia — Sitio Web
 
 Sitio web premium para **El Leñador de Colombia**, restaurante de comida
 típica santandereana ubicado en la Calle 68, Barrio La Victoria,
@@ -10,39 +10,40 @@ modular, accesible y optimizada para rendimiento.
 
 ```
 lenador/
-├── index.html                  Página de inicio
-├── nosotros.html                Historia y valores
-├── menu.html                    Menú dinámico (lee js/menu-data.js)
-├── galeria.html                 Galería con filtros y lightbox
-├── reservas.html                Formulario de reservas
-├── contacto.html                Formulario de contacto + mapa
-├── politica-privacidad.html
-├── terminos-condiciones.html
-├── 404.html
+├── index.html
 ├── robots.txt
 ├── sitemap.xml
+├── src/
+│   ├── nosotros.html
+│   ├── menu.html
+│   ├── galeria.html
+│   ├── reservas.html
+│   ├── contacto.html
+│   ├── politica-privacidad.html
+│   ├── terminos-condiciones.html
+│   └── 404.html
 ├── css/
-│   ├── variables.css            Design tokens (colores, tipografía, espaciados)
-│   ├── reset.css                 Normalización entre navegadores
-│   ├── style.css                  Estilos base globales
-│   ├── components.css             Componentes UI (botones, navbar, cards, footer...)
-│   ├── animations.css             Keyframes y reveal-on-scroll
-│   └── responsive.css             Ajustes por breakpoint
+│   ├── variables.css
+│   ├── reset.css
+│   ├── style.css
+│   ├── components.css
+│   ├── animations.css
+│   └── responsive.css
 ├── js/
-│   ├── utils.js                   Helpers puros (debounce, formatCOP, validaciones)
-│   ├── main.js                    Navbar, header on scroll, cookies, back-to-top
-│   ├── animations.js              IntersectionObserver para [data-reveal]
-│   ├── menu-data.js                ★ ÚNICA fuente de datos del menú (editar aquí)
-│   ├── menu.js                     Render dinámico del menú + búsqueda + filtros
-│   ├── gallery.js                  Filtros de galería + lightbox accesible
-│   └── forms.js                    Validación de formularios (reservas/contacto)
+│   ├── utils.js
+│   ├── main.js
+│   ├── animations.js
+│   ├── menu-data.js
+│   ├── menu.js
+│   ├── gallery.js
+│   └── forms.js
 └── assets/
-    ├── images/                    Fotografías (ver README-IMAGENES.txt)
-    ├── icons/logo.svg              Logo de marca (placeholder editable)
-    ├── favicon/                    Íconos de pestaña del navegador
-    ├── fonts/                      (usa Google Fonts por CDN; carpeta reservada
-    │                                por si se requieren fuentes autoalojadas)
-    └── videos/                     Reservada para video de fondo si se desea
+    ├── images/
+    ├── icons/
+    │   └── logo.svg
+    ├── favicon/
+    ├── fonts/
+    └── videos/
 ```
 
 ## 2. Cómo ejecutar el sitio localmente
