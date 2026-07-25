@@ -9,41 +9,41 @@ modular, accesible y optimizada para rendimiento.
 ## 1. Estructura del proyecto
 
 ```
-lenador/
+Restaurante/
 ├── index.html
 ├── robots.txt
 ├── sitemap.xml
-├── src/
-│   ├── nosotros.html
-│   ├── menu.html
-│   ├── galeria.html
-│   ├── reservas.html
-│   ├── contacto.html
-│   ├── politica-privacidad.html
-│   ├── terminos-condiciones.html
-│   └── 404.html
-├── css/
-│   ├── variables.css
-│   ├── reset.css
-│   ├── style.css
-│   ├── components.css
-│   ├── animations.css
-│   └── responsive.css
-├── js/
-│   ├── utils.js
-│   ├── main.js
-│   ├── animations.js
-│   ├── menu-data.js
-│   ├── menu.js
-│   ├── gallery.js
-│   └── forms.js
-└── assets/
-    ├── images/
-    ├── icons/
-    │   └── logo.svg
-    ├── favicon/
-    ├── fonts/
-    └── videos/
+└── src/
+    ├── nosotros.html
+    ├── menu.html
+    ├── galeria.html
+    ├── reservas.html
+    ├── contacto.html
+    ├── politica-privacidad.html
+    ├── terminos-condiciones.html
+    ├── 404.html
+    ├── css/
+    │   ├── variables.css
+    │   ├── reset.css
+    │   ├── style.css
+    │   ├── components.css
+    │   ├── animations.css
+    │   └── responsive.css
+    ├── js/
+    │   ├── utils.js
+    │   ├── main.js
+    │   ├── animations.js
+    │   ├── menu-data.js
+    │   ├── menu.js
+    │   ├── gallery.js
+    │   └── forms.js
+    └── assets/
+        ├── images/
+        ├── icons/
+        │   └── logo.svg
+        ├── favicon/
+        ├── fonts/
+        └── videos/
 ```
 
 ## 2. Cómo ejecutar el sitio localmente
